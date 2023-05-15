@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero__inner-container::before {
+    content: "";
+    background-image: url("../img/bg-pattern-hero-home.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 594px;
+    width: 1006px;
+    top: 0;
+    right: -380px;
+}
+
+.hero__img {
+    background-image: url("../img/image-hero-phone.png");
+}
+
+.contact__inner-container::before {
+    content: "";
+    background-image: url("../img/bg-pattern-call-to-action.svg");
+    position: absolute;
+    top: -50%;
+    right: 0;
+    height: 584px;
+    width: 876px;
+}
+
+@media (min-width: 576px) {
+    .hero__inner-container::before {
+        top: 50px;
+        right: -450px;
+    }
+}
+
+/* @media (min-width: 768px) {
+} */
+
+@media (min-width: 992px) {
+    .hero__img {
+        background-position: center -2rem;
+        height: auto;
+        margin-top: 0;
+    }
+
+    .hero__inner-container::before {
+        top: 0;
+    }
+}
+
+/* @media (min-width: 1200px) {
+} */
